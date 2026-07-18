@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
         timeRemaining -= Time.deltaTime;
         GameUI.Instance?.UpdateTimer(timeRemaining);
         if (timeRemaining <= 0)
-            TriggerGameOver("Time's up!");
+            TriggerGameOver("TIME'S UP!");
     }
 
     public void QuitGame() {
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
 
     // Called by PlayerBehavior
     public static void RegisterPlayerDeath() {
-        Instance.TriggerGameOver("You were killed!");
+        Instance.TriggerGameOver("YOU WERE KILLED!");
     }
     public static void SelectWeapon(PlayerWeaponType weaponType) {
         OnWeaponChanged?.Invoke(weaponType);
